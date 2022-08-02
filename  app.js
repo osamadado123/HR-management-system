@@ -1,5 +1,5 @@
 const Ghazi = {
-     EmployeeID : ""  ,
+     EmployeeID : "1000"  ,
      FullName : "Ghazi Samer"   ,
      Department :  "administration"   ,
      Level : "senior"  ,
@@ -23,7 +23,7 @@ const Ghazi = {
 Ghazi.uniqueNum();
 Ghazi.Salarycalc();
 const Lana = {
-    EmployeeID :  "" ,
+    EmployeeID :  "1001" ,
     FullName : "Lana Ali"   ,
     Department :  "Finance"   ,
     Level :  "senior" ,
@@ -48,7 +48,7 @@ Lana.uniqueNum();
 Lana.Salarycalc();
 
 const Tamara = {
-    EmployeeID :  "" ,
+    EmployeeID :  "1002" ,
     FullName :   "Tamara Ayoub" ,
     Department : "Marketing"    ,
     Level : "Senior"  ,
@@ -73,7 +73,7 @@ const Tamara = {
 Tamara.uniqueNum();
 Tamara.Salarycalc();
 const Safi = {
-    EmployeeID : ""  ,
+    EmployeeID : "1003"  ,
     FullName : "Safi Walid"   ,
     Department :  "Administration"   ,
     Level :  "Mid-Senior" ,
@@ -99,7 +99,7 @@ const Safi = {
 Safi.uniqueNum();
 Safi.Salarycalc();
 const Omar = {
-    EmployeeID : "" ,
+    EmployeeID : "1004" ,
     FullName : "Omar Zaid"   ,
     Department :  "Development	"   ,
     Level :  "senior" ,
@@ -123,7 +123,7 @@ const Omar = {
 Omar.uniqueNum();
 Omar.Salarycalc();
 const Rana = {
-    EmployeeID :  "" ,
+    EmployeeID :  "1005" ,
     FullName : "Rana Saleh"  ,
     Department :   "Development"  ,
     Level :  "Junior" ,
@@ -147,7 +147,7 @@ const Rana = {
  Rana.uniqueNum();
   Rana.Salarycalc();
 const Hadi = {
-    EmployeeID: 0   ,
+    EmployeeID: "1006"   ,
     FullName:  "Hadi Ahmad"  ,
     Department:   "Finance"  ,
     Level: "Mid-Senior"  ,
