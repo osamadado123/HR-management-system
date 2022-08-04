@@ -221,13 +221,7 @@ this.EmployeeID= val;
 allEmployees.push(this);
 
 }
-User.prototype.output = function (){
-console.log("Employee name: "+this.FullName);
 
-console.log("Department: "+this.Department);
-
-console.log("Employee salary: "+this.Salary);
-}
 User.prototype.render = function(){
 document.write(`<p>Employee name: ${this.FullName} <br> Department: ${this.Department} <br> Employee salary: ${this.Salary}</p>`)
 }
@@ -259,13 +253,7 @@ Rana.Salarycalc();
 Hadi.uniqueNum();
 Hadi.Salarycalc();
 
-Ghazi.output();
-Lana.output();
-Tamara.output();
-Safi.output();
-Omar.output();
-Rana.output();
-Hadi.output();
+
 Ghazi.render();
 Lana.render();
 Tamara.render();
