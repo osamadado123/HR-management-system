@@ -196,6 +196,8 @@ console.log("Employee name: "+Hadi.FullName);
 console.log("Employee salary: " + (Hadi.Salary - Hadi.Salary*0.075))
 
 */
+const body = document.getElementsByTagName('body');
+
 const allEmployees = [];
 function User(EmployeeID1,FullName1,Department1,Level1,ImageURL1,Salary1) {
    this.EmployeeID = EmployeeID1;
@@ -223,21 +225,46 @@ allEmployees.push(this);
 }
 
 User.prototype.render = function(){
-document.write(`<p>Employee name: ${this.FullName} <br> Department: ${this.Department} <br> Employee salary: ${this.Salary}</p>`)
+ const IMGS = document.createElement ('img');
+ IMGS.className="images";
+ 
+ IMGS.src= this.ImageURL;
+ IMGS.alt = this.FullName;
+ body[0].appendChild(IMGS);
+ const NM = document.createElement('span')
+ NM.className="frame";
+ NM.textContent = `Name :  ${this.FullName}`;
+ body[0].appendChild(NM); 
+ const ID = document.createElement('span')
+ ID.className="frame";
+ ID.textContent = ` ID :  ${this.EmployeeID}`;
+ body[0].appendChild(ID); 
+ const dep = document.createElement('span')
+ dep.className="frame";
+ dep.textContent = ` Department :  ${this.Department}`;
+ body[0].appendChild(dep); 
+ const LVL = document.createElement('span')
+ LVL.className="frame";
+ LVL.textContent = ` Level :  ${this.Level}`;
+ body[0].appendChild(LVL); 
+ const slr = document.createElement('span')
+ slr.className="frame";
+ slr.textContent= ` Salary : ${this.Salary}`
+ body[0].appendChild(slr);
 }
-const Ghazi = new User("1000","Ghazi Samer", "administration" ,"senior","https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cmFuZG9tJTIwcGVvcGxlfGVufDB8fDB8fA%3D%3D&w=1000&q=80",0);
+const Ghazi = new User("1000","Ghazi Samer", "administration" ,"senior","./assets/Ghazi.jpg",0);
 
-const Lana = new User ("1001", "Lana Ali","Finance","senior","https://live.staticflickr.com/5252/5403292396_0804de9bcf_b.jpg",0);
+const Lana = new User ("1001", "Lana Ali","Finance","senior","./assets/Lana.jpg",0);
 
-const Tamara = new User("1002", "Tamara Ayoub", "Marketing", "senior","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmXSpQ9WydM6R7Z8djdgWmNPH_wmdL2DePnw&usqp=CAU",0);
+const Tamara = new User("1002", "Tamara Ayoub", "Marketing", "senior","./assets/Tamara.jpg",0);
 
-const Safi = new User("1003","Safi Walid","Administration","Mid-Senior","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSILg48X1W2TnwhKbimLBfOmmjlFNARCJwDKQ&usqp=CAU",0)
+const Safi = new User("1003","Safi Walid","Administration","Mid-Senior","./assets/Safi.jpg",0)
 
-const Omar = new User("1004", "Omar Zaid", "Development", "senior","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRe1HJ6b1g1vpv3mxaBS5951lrZOhIrfXSgvw&usqp=CAU",0)
+const Omar = new User("1004", "Omar Zaid", "Development", "senior","./assets/Omar.jpg",0)
 
-const Rana = new User("1005","Rana Saleh","Development","Junior","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo2wUhWS-WwLKFsiscoCIVnz_WXYvbi0S-xA&usqp=CAU",0)
+const Rana = new User("1005","Rana Saleh","Development","Junior","./assets/Rana.jpg",0)
 
-const Hadi = new User("1006","Hadi Ahmad","Finance","Mid-Senior","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-sdWjJ3MVtWEFHlPvPNdSMkI1VqNd98udeQ&usqp=CAU",0)
+const Hadi = new User("1006","Hadi Ahmad","Finance","Mid-Senior","./assets/Hadi.jpg",0)
 Ghazi.uniqueNum();
 Ghazi.Salarycalc();
 Lana.uniqueNum();
